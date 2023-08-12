@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    overflow: hidden;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+video{
+    width: 110%;
+    position: absolute;
+    z-index: -1;
+}
+
+div{
+    height: 60vh;
+    width: 400px;
+    background-image: linear-gradient(90deg, #dad5ca 50%, #dad5ca 50%);
+    font-family: 'Roboto Flex', sans-serif;
+    color: black;
+    overflow: hidden;
+    display:flex;
+    position: relative;
+}
+
+form{
+    height: 60vh;
+    width: 400px;
+    display: flex;
+    flex-direction:column;
+    font-family: 'Roboto Flex', sans-serif;
+    color: black;
+    position: absolute;
+    transition-duration: 1s;
+}
+
+form h3{
+    padding: 10px;
+    font-size: 2em;
+}
+
+form label{
+    padding: 10px;
+}
+
+form input{
+    appearance: none;
+    padding: 10px;
+    width: 80%;
+    border:none;
+    margin-left: 10px;
+    font-size:1em;
+    border-left: 2px solid black;
+    background-color: black;
+    color: white;
+}
+
+input:focus{
+    outline: none;
+}
+
+form #submit{
+    width: 50%;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+}
+
+form span{
+    width: 35%;
+    display: flex;
+    padding: 5px;
+    font-size: 1.1em;
+    color: rgb(74, 65, 65);
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    align-self: flex-end;
+}
+
+form span h4{
+    padding: 5px;
+}
+
+form span i{
+    padding: 5px;
+}
+
+#signup{
+    left:0;
+}
+
+#signin{
+    left: 100%;
+}
+
+
+
+.fr1{
+    animation-name: move;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    0%{
+        left:0;
+    }
+    100%{
+        left: -100%;
+    }
+}
+
+.fr2{
+    animation-name: move2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move2 {
+
+    100%{
+        left: 0;
+    }
+}
+
+h5{
+    color: red;
+    font-size: 2em;
+    position: absolute;
+    bottom: 100px;
+    font-family: 'Roboto Flex', sans-serif;
+}

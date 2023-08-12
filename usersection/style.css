@@ -1,0 +1,288 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  background-color: rgb(30, 30, 30);
+}
+
+#con{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  color: rgb(0, 46, 79);
+}
+
+.container{
+  margin: 20px;
+  height: 100px;
+  width: 400px;
+  border-radius: 25px;
+}
+
+
+
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+
+#uploader{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  padding: 20px;
+  font-size: 1.5em;
+  border-radius: 25px;
+}
+
+#uploader img{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+#uploader #userlink{
+  padding-left: 10px;
+  color: rgb(166, 157, 157);
+}
+
+
+
+/*********************************/
+
+
+
+
+nav{
+  display: flex;
+  height: 100vh;
+  width: 20vw;
+  min-width: 70px;
+  max-width: 300px;
+  box-shadow: 0px 0px 10px black;
+  background-image: url("../staticImages/clouds-19.jpg");
+}
+
+nav #background{
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(79, 40, 40, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#background i{
+  color: white;
+  font-size: 1.3em;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.fa-arrow-right{
+  display: none;
+}
+
+#user{
+  display: flex;
+  height: 100px;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  text-align: center;
+}
+
+#user img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#user h3{
+  width: 200px;
+  color: rgb(255, 255, 255) !important;
+}
+
+hr{
+  display: block;
+  border: none;
+  outline: none;
+  height: 1px;
+  width: 55%;
+  background: whitesmoke;
+}
+
+.links{
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+
+.hideText{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hideText a{
+  
+  font-size:0.7em;
+}
+
+.links i{
+  height: 40px !important; 
+  width:40px !important;
+  margin: 0 !important;
+  padding: 10px !important;
+}
+
+.links a{
+  width: 120px;
+}
+
+#videosCon{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#videosCon a{
+  
+  display: block;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
+
+
+
+
+
+
+/* ******************** SEARCH BAR ****************************** */
+
+
+#searchBar{
+  display: flex;
+  height: 50px;
+  width: 30vw;
+  min-width: 300px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+  margin: 20px;
+  background: url('../staticImages/clouds-19.jpg');
+  background-size:cover;
+}
+#searchBack{
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  background: rgba(79, 40, 40, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+#searchBack input{
+  height: 100%;
+  width: 90%;
+  border: none;
+  border-radius: 25px;
+  padding-left: 15px;
+  font-size: 1em;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+#searchBack i{
+  padding-right: 20px;
+  color: white;
+}
+
+#searchBack input:focus{
+  outline: none;
+}
+
+
+#searchBack input::placeholder{
+color: white;
+}
+
+
+
+/* ******************** MEDIA QUERIES ********************************************** */
+
+@media only screen and (max-width: 1300px) {
+  nav{
+      width: 5vw;
+  }
+  #user h3{
+      display: none;
+  }
+  .links{
+
+      display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  }
+  a{
+      font-size: 0.7em;
+  }
+}
+

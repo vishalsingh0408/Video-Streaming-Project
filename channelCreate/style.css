@@ -1,0 +1,621 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+form{
+    height: 30vw;
+    width: 80%;
+    background-image: url('ch.png');
+    position: relative;
+    display: flex;
+    background-size: 100% 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form div{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50%;
+}
+
+
+form #cover{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    position: absolute;
+    backdrop-filter: blur(5px);
+}
+
+form #cover #coverInput{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+
+}
+form #icon{
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+    background-image: url('logo.png');
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 50px 10px black;
+}
+
+form #icon input{
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+form #name{
+    height: 100px;
+
+}
+
+form #name input{
+    padding: 10px;
+    color: white;
+    font-size: 3vw;
+    height: 100%;
+    width: 100%;
+    text-shadow: 0px 0px 10px black;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+form #name input::placeholder{
+    color: white;
+}
+
+form #name input:focus{
+    outline: none;
+}
+
+#cr{
+    display: none;
+}
+
+button{
+    margin-top: 170px;
+    appearance: none;
+    border: none;
+    background-color: #38c5da;
+    font-size: 1vw;
+    padding: 10px;
+    color: white;
+    border-radius: 25px;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: #424748;
+    transition-duration: 0.4s;
+}
+
+#videos{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, max-content));
+}
+
+.videosTitle{
+    align-self: flex-start;
+    margin: 70px;
+    color: white;
+    font-size: 2em;
+}
+
+
+
+#chData{
+    width: 90%;
+    height: 30vw;
+    margin: 20px;
+    display: flex;
+    background-size: cover;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+}
+
+#chPN{
+    display: flex;
+    height: 30%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100px);
+}
+
+#chPN img{
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px black;
+}
+
+#chPN #heading{
+    width: 60%;
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+}
+
+/***************VIDEO FORM*****************************/
+
+/*
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+form #name{
+    width: 600px;
+    font-size: 1em;
+    padding: 20px;
+    background-color: black;
+    border:none;
+    color:white;
+    margin: 20px 20px;
+}
+
+form label{
+    font-size:1em;
+    color:white;
+    margin: 5px 20px;
+}
+
+form #vid{
+    width: 200px;
+    font-size: 1em;
+    padding: 20px;
+    background-color: black;
+    border:none;
+    color:white;
+    margin:20px 20px;
+}
+
+form #pic{
+    width: 200px;
+    font-size: 1em;
+    padding: 20px;
+    background-color: black;
+    border:none;
+    color:white;
+    margin: 20px 20px;
+}
+
+form #submit{
+    width: 100px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    border: none;
+    margin: 20px 20px;
+}
+
+.uploadTitle{
+    align-self: flex-start;
+    margin: 70px;
+    color: white;
+    font-size: 2em;
+}
+
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+section{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.main{
+    height: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    animation: ch;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+    border-radius: 25px;
+}
+
+
+
+
+.main .content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(25px);
+      border-radius: 25px;
+}
+
+.content img{
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    margin: 30px;
+    box-shadow: 0px 0px 20px rgb(20, 101, 101);
+}
+
+.content{
+    width: 70%;
+    display: flex;
+    align-items: center;
+
+    color: white !important;
+    text-shadow: 0px 0px 10px black;
+
+}
+
+.content span{
+  overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+  width: 60%;
+  font-size: 3vw;
+}
+
+/* unvisited link */
+a:link {
+    text-decoration: none;
+    color: white;
+  }
+
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: white;
+  }
+
+  /* selected link */
+  a:active {
+    color: white;
+  }
+
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    background-color: rgb(30, 30, 30);
+}
+
+#con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: rgb(0, 46, 79);
+}
+
+.container{
+    margin: 20px;
+    height: 250px;
+    width: 300px;
+}
+
+#box{
+    height: fit-content;
+    width: 100%;
+}
+
+#box img{
+    height: 150px;
+    width: 100%;
+}
+
+#box #link{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1em;
+    padding-top:20px;
+}
+
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+  
+  /* visited link */
+a:visited {
+    color: black;
+}
+  
+  /* mouse over link */
+a:hover {
+    color: black;
+}
+  
+  /* selected link */
+a:active {
+    color: black;
+}
+
+
+#uploader{
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#uploader img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+#uploader #userlink{
+    padding-left: 10px;
+    color: rgb(166, 157, 157);
+}
+
+
+
+/*********************************/
+
+
+
+
+nav{
+    display: flex;
+    height: 100vh;
+    width: 20vw;
+    min-width: 70px;
+    max-width: 300px;
+    box-shadow: 0px 0px 10px black;
+    background-image: url("../staticImages/clouds-19.jpg");
+}
+
+nav #background{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(79, 40, 40, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#background i{
+    color: white;
+    font-size: 1.3em;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.fa-arrow-right{
+    display: none;
+}
+
+#user{
+    display: flex;
+    height: 100px;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+
+#user img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#user h3{
+    width: 200px;
+    color: rgb(255, 255, 255) !important;
+}
+
+hr{
+    display: block;
+    border: none;
+    outline: none;
+    height: 1px;
+    width: 55%;
+    background: whitesmoke;
+}
+
+.links{
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+
+.hideText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hideText a{
+    
+    font-size:0.7em;
+}
+
+.links i{
+    height: 40px !important; 
+    width:40px !important;
+    margin: 0 !important;
+    padding: 10px !important;
+}
+
+.links a{
+    width: 120px;
+}
+
+#videosCon{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+
+#videosCon a{
+    
+    display: block;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+  }
+
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: white;
+  }
+
+  /* selected link */
+  a:active {
+    color: white;
+  }
+
+
+
+
+
+
+/* ******************** SEARCH BAR ****************************** */
+
+
+  #searchBar{
+    display: flex;
+    height: 50px;
+    width: 30vw;
+    min-width: 300px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    margin: 20px;
+    background: url('../staticImages/clouds-19.jpg');
+    background-size:cover;
+}
+  #searchBack{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background: rgba(79, 40, 40, 0.5);
+    backdrop-filter: blur(5px);
+  }
+
+#searchBack input{
+    height: 100%;
+    width: 90%;
+    border: none;
+    border-radius: 25px;
+    padding-left: 15px;
+    font-size: 1em;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+#searchBack i{
+    padding-right: 20px;
+    color: white;
+}
+
+#searchBack input:focus{
+    outline: none;
+}
+
+
+#searchBack input::placeholder{
+  color: white;
+}
+
+
+
+/* ******************** MEDIA QUERIES ********************************************** */
+
+@media only screen and (max-width: 1300px) {
+    nav{
+        width: 5vw;
+    }
+    #user h3{
+        display: none;
+    }
+    .links{
+
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+    a{
+        font-size: 0.7em;
+    }
+  }

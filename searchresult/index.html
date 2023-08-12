@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/be1b1b95c6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div id="background">
+            <i class="fa-solid fa-arrow-left" onclick="bar()"></i>
+            <i class="fa-solid fa-arrow-right" onclick="bar()"></i>
+            <span id="user">
+                <img src="../profilepics/<?php session_start(); echo $_SESSION['profilepic']; ?>" alt="icon">
+                <h3 id="userName"><?php echo $_SESSION['name']; ?></h3>
+            </span>
+            <hr>
+
+            <span id="home" class="links">
+                <i class="fa-solid fa-house"></i>
+                <a href="../index.php" target="page">Home</a>
+            </span>
+
+            <span id="home" class="links">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <a href="../index.php" target="page">User Dashboard</a>
+            </span>
+
+            <span id="home" class="links">
+                <i class="fa-solid fa-compact-disc"></i>
+                <a href="../channel/index.php" target="page">Channels</a>
+            </span>
+
+            <span id="home" class="links">
+                <i class="fa-solid fa-circle-plus"></i>
+                <a href="../channelCreate/index.php" target="page">Add Channel</a>
+            </span>
+
+        </div>
+    </nav>
+
+    <section>
+        <span id="searchBar">
+          <span id="searchBack">
+            <input type="text" id="text" placeholder="Type something here">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+
+        </span>
+
+
+        <iframe name="page" src="../index.php">
+
+        </iframe>
+    </section>
+
+</body>
+<script>
+    function bar() {
+        if(document.querySelector('.fa-arrow-right').style.display == 'block'){
+            document.querySelector('.fa-arrow-right').style.display = 'none';
+            document.querySelector('.fa-arrow-left').style.display = 'block';
+
+            document.querySelector('nav').style.width = '20vw';
+
+            for(let i=0;i<4;i++)
+            {
+                document.querySelectorAll('#home')[i].classList.remove("hideText");
+                document.querySelectorAll('#home')[i].classList.add("links");
+            }
+            document.querySelector('#userName').style.display = 'block';
+
+        }else{
+            document.querySelector('.fa-arrow-right').style.display = 'block';
+            document.querySelector('.fa-arrow-left').style.display = 'none';
+
+            document.querySelector('nav').style.width = '5vw';
+
+            for(let i=0;i<4;i++)
+            {
+                document.querySelectorAll('#home')[i].classList.remove("links");
+                document.querySelectorAll('#home')[i].classList.add("hideText");
+            }
+            document.querySelector('#userName').style.display = 'none';
+
+        }
+
+
+
+    }
+</script>
+</html>

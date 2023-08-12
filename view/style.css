@@ -1,0 +1,543 @@
+
+
+
+
+
+
+
+
+
+/***************************/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  background-color: rgb(30, 30, 30);
+}
+
+#con{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  color: rgb(0, 46, 79);
+}
+
+.container{
+  margin: 20px;
+  height: 250px;
+  width: 300px;
+}
+
+#box{
+  height: fit-content;
+  width: 100%;
+}
+
+#box img{
+  height: 150px;
+  width: 100%;
+}
+
+#box #link{
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1em;
+  padding-top:20px;
+}
+
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+
+#uploader{
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#uploader img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+#uploader #userlink{
+  padding-left: 10px;
+  color: rgb(166, 157, 157);
+}
+
+
+
+/*********************************/
+
+
+
+
+nav{
+  display: flex;
+  height: 100vh;
+  width: 20vw;
+  min-width: 70px;
+  max-width: 300px;
+  box-shadow: 0px 0px 10px black;
+  background-image: url("../staticImages/clouds-19.jpg");
+}
+
+nav #background{
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(79, 40, 40, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#background i{
+  color: white;
+  font-size: 1.3em;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.fa-arrow-right{
+  display: none;
+}
+
+#user{
+  display: flex;
+  height: 100px;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  text-align: center;
+}
+
+#user img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#user h3{
+  width: 200px;
+  color: rgb(255, 255, 255) !important;
+}
+
+hr{
+  display: block;
+  border: none;
+  outline: none;
+  height: 1px;
+  width: 55%;
+  background: whitesmoke;
+}
+
+.links{
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+
+.hideText{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hideText a{
+  
+  font-size:0.7em;
+}
+
+.links i{
+  height: 40px !important; 
+  width:40px !important;
+  margin: 0 !important;
+  padding: 10px !important;
+}
+
+.links a{
+  width: 120px;
+}
+
+#videosCon{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#videosCon a{
+  
+  display: block;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
+
+
+
+
+
+
+/* ******************** SEARCH BAR ****************************** */
+
+
+#searchBar{
+  display: flex;
+  height: 50px;
+  width: 30vw;
+  min-width: 300px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+  margin: 20px;
+  background: url('../staticImages/clouds-19.jpg');
+  background-size:cover;
+}
+#searchBack{
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  background: rgba(79, 40, 40, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+#searchBack input{
+  height: 100%;
+  width: 90%;
+  border: none;
+  border-radius: 25px;
+  padding-left: 15px;
+  font-size: 1em;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+#searchBack i{
+  padding-right: 20px;
+  color: white;
+}
+
+#searchBack input:focus{
+  outline: none;
+}
+
+
+#searchBack input::placeholder{
+color: white;
+}
+
+
+/****************VIDEO***********************/
+
+#main{
+  margin: 20px 0;
+  height: 70vh;
+  width: 90%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  position: relative;
+}
+#main video{
+  height:100%;
+}
+#container{
+  width: 90%;
+  display: flex;
+  justify-content: space-between; 
+}
+
+#container #conVideo{
+  display: flex;
+  flex-direction: column;
+}
+
+#container #conVideo span{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#container #conVideo span img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#container #conVideo span h4{
+  margin-left: 20px;
+  color: grey;
+}
+
+#container h3{
+  font-size: 1.5em;
+  width: 500px;
+  color: white;
+}
+
+#container #emoji_container{
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#container #emoji_container img{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.comments{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin: 60px;
+}
+
+
+.comments h3{
+  color: white;
+}
+
+
+.comments #comment{
+  height: 50px;
+  width: 600px;
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 1em;
+  background-color:black;
+  color: white;
+  outline:none;
+  border:none;
+}
+
+.comments #sub{
+  height: 50px;
+  width: 100px;
+  margin: 20px 0px;
+  background-color:black;
+  color: grey;
+  outline:none;
+  border:none;
+}
+
+.comm{
+  height: fit-content;
+  display:flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.comm .by{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  color: grey;
+}
+
+.comm .by h3{
+  color: rgb(207, 203, 203);
+  padding-right: 3px;
+}
+
+.comm .by img{
+  height: 30px;
+  width:30px;
+  border-radius:50%;
+  margin: 20px;
+}
+
+.comm p{
+  padding:10px 0px;
+  color: white;
+}
+
+/********************VIDEO CONTROLS****************/
+
+audio{
+  display: block;
+}
+
+.videoControls{
+  height: 100px;
+  width: 100%;
+  background-image: linear-gradient(to top,black, transparent);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  bottom:0;
+  color: white;
+}
+
+
+
+.seekCon{
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+#seek{
+  width: 70%;
+  height: 3px;
+  background-color: cyan;
+  position: relative;
+  transition-duration: 0.2s;
+}
+
+
+
+#seek::before{
+  content:'';
+  position:absolute;
+  height: 5px;
+  width: var(--seekVal);
+  background-color: grey;
+}
+
+#seek::after{
+  content:'';
+  display: block;
+  height:10px;
+  width: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 5px white;
+  border-radius: 50%;
+  position: absolute;
+  left: var(--seekVal);
+  top:-100%;
+}
+
+.mainControls{
+  display: flex;
+  font-size: 1em;
+  color: white;
+  justify-content:space-between;
+}
+
+.mainControls span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.mainControls input{
+  margin-left: 10px;
+}
+
+.mainControls div{
+  display: flex;
+}
+
+.mainControls div:nth-of-type(1){
+  margin-left: 50px;
+}
+
+
+.mainControls div:nth-of-type(1) div{
+  margin-left: 0;
+}
+
+
+
+#pl .fa-pause{
+  display: none;
+}
+
+
+
+.mainControls div:nth-of-type(2){
+  margin-right: 50px;
+}
+
+#languages i{
+  font-size: 1.5em;
+}
+
+/* ******************** MEDIA QUERIES ********************************************** */
+
+@media only screen and (max-width: 1300px) {
+  nav{
+      width: 5vw;
+  }
+  #user h3{
+      display: none;
+  }
+  .links{
+
+      display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  }
+  a{
+      font-size: 0.7em;
+  }
+}
+
